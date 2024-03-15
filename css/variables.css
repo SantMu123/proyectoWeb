@@ -1,5 +1,6 @@
 :root{
-    --color-primario: ;
-    --color-secundario: ;
-    --color-terciario: ;
+    --color-letras: #ff702a;
+    --color-fondo-movil: #2c2b47;
+    --color-fondo: #1e1d2b;
+    --color-letras-dos: #fff;
 }
