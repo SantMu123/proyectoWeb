@@ -7,7 +7,27 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5em repeat(5, 3fr) 2fr;
+    grid-template-areas:
+        "header"
+        "frame1"
+        "frame2"
+        "frame3"
+        "frame4"
+        "frame5"
+        "frame6"
+        "footer"
+        ;
+    width: 100%;
+    height: 240em;
+    /* background: coral; */
+}
+header a i:last-child{
+    display: none;
+}
 .menu{
     width: 100%;
     height: 5em;
@@ -17,29 +37,33 @@
     padding: 0 45px;
     justify-content: space-between;
     align-items: center;
+    grid-area: header;
 }
+
 .menu_item il a{
-    margin: 5px;
+    margin: 20px;
     text-decoration: none;
     color: var(--color-letras-dos);
     text-transform: capitalize;
-
 }
 .frame1{
     display: flex;
     background: var(--color-fondo);
-    height: 22em;
+    height: 40em;
+    width: 100%;
     padding: 6em;
     padding-left: 3.2em;
     justify-content: space-around;
+    grid-area: frame1;
 }
 
 .frame1_item1{
-    height: 14em;
-    /*background: greenyellow;*/
+    /* background: greenyellow; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1em;
+    height: 28em;
 }
 
 .frame1_item1 h1{
@@ -62,15 +86,81 @@
     border: 0; 
 }
 
+.frame2{
+    /* background: greenyellow; */
+    background: var(--color-fondo);
+    height: 40em;
+    grid-area: frame2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6em;
+    padding-left: 3.2em;
+    width:100%;
+}
+.frame2 img{
+    width: 25em;
+    height: auto;
+}
+.frame2_item1{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 25em;
+}
+.frame2_item1 small{
+    color: var(--color-letras);
+    text-transform: capitalize;
+}
+.frame2_item1 h2{
+    color: var(--color-letras-dos);
+    font-size: 2.2em;
+}
 
+.frame2_item1 p{
+    color: var(--color-letras-dos);
+    font-size: 1.2em;
+}
+.frame2_item1 button{
+    background: var(--color-letras);
+    color: var(--color-letras-dos);
+    text-transform: capitalize;
+    width: 35%;
+    height: 2em;
+    border: 0; 
+}
+
+.frame3{
+    background: cornflowerblue;
+    height: 40em;
+    grid-area: frame3;
+}
+.frame4{
+    background: crimson;
+    height: 40em;
+    grid-area: frame4;
+}
+.frame5{
+    background: cadetblue;
+    height: 40em;
+    grid-area: frame5;
+}
+.frame6{
+    background: pink;
+    height: 40em;
+    grid-area: frame6;
+}
 
 .footer{
+    height: 20em;
     display: flex;
+    grid-area: footer;
 }
 
 
 @media (width < 600px){
-    .menu a {
+    header a i{
         text-transform: none;
         color: inherit;
     }
