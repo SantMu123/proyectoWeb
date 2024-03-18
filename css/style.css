@@ -21,7 +21,7 @@
         "footer"
         ;
     width: 100%;
-    height: 240em;
+    height: 220em;
     /* background: coral; */
 }
 header a i:last-child{
@@ -50,21 +50,25 @@ header a i:last-child{
 .frame1{
     display: flex;
     background: var(--color-fondo);
-    height: 40em;
+    height: 50em;
     width: 100%;
-    padding: 6em;
+    padding: 15em;
     padding-left: 3.2em;
     justify-content: space-around;
     grid-area: frame1;
 }
 
+.frame1 img{
+    /*background: red;*/
+}
+
 .frame1_item1{
-    /* background: greenyellow; */
+    /*background: greenyellow;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    height: 28em;
+    height: auto;
 }
 
 .frame1_item1 h1{
@@ -90,13 +94,13 @@ header a i:last-child{
 .frame2{
     /* background: greenyellow; */
     background: var(--color-fondo);
-    height: 40em;
+    height: 50em;
     grid-area: frame2;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 6em;
+    padding: 15em;
     padding-left: 3.2em;
     width:100%;
 }
@@ -134,10 +138,11 @@ header a i:last-child{
 
 .frame3{
     background: var(--color-fondo);
-    height: 40em;
+    height: 50em;
     grid-area: frame3;
     display: flex;
     flex-direction: column;
+    padding: 15em;
 }
 .frame3_titulo,
 .frame4_titulo{
@@ -167,7 +172,7 @@ header a i:last-child{
 .frame3_contenido_parte1,
 .frame3_contenido_parte2,
 .frame3_contenido_parte3{
-    /* background: red; */
+    background: var(--color-fondo-uno);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -204,15 +209,15 @@ header a i:last-child{
 .frame3_contenido_parte3_contenido1{
     /* background: coral; */
     text-transform: capitalize;
-    color: var(--color-letras-dos);
+    /*color: var(--color-letras-dos);*/
 }
 .frame3_contenido_parte1_contenido1 div,
 .frame3_contenido_parte2_contenido1 div,
 .frame3_contenido_parte3_contenido1 div{
     /* background: green; */
     margin-top: 5px;
-    line-height: 1em;
-    color: var(--color-letras-dos);
+    line-height: 1.1em;
+    /*color: var(--color-letras-dos);*/
 }
 .frame3_contenido_parte1_contenido1 div small,
 .frame3_contenido_parte2_contenido1 div small,
@@ -221,10 +226,11 @@ header a i:last-child{
 }
 .frame4{
     background: var(--color-fondo);
-    height: 40em;
+    height: 50em;
     grid-area: frame4;
     display: flex;
     flex-direction: column;
+    padding: 15em;
 }
 .frame4_contenido{
     /* background: greenyellow; */
@@ -256,6 +262,8 @@ header a i:last-child{
 .frame4_contenido_parte1 h3{
     color: var(--color-letras);
     text-transform: capitalize;
+    font-size: 1.7em;
+    margin-bottom: 1em;
 }
 .frame4_contenido_parte1 p{
     color: var(--color-letras-dos);
@@ -263,11 +271,37 @@ header a i:last-child{
     width: 48%;
 }
 .frame5{
-    background: cadetblue;
-    height: 40em;
+    background: var(--color-fondo);
+    height: 50em;
     grid-area: frame5;
+    display: flex;
+    flex-direction: column;
+    padding: 15em;
 }
+.frame5_principal{
+    background: var(--color-fondo-uno);
+    text-align: center;
+    height: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.frame5_principal p{
+    /*background: red;*/
+    font-size: 300%;
+    width: 40%;
+}
+.frame5_principal button{
+    background: var(--color-letras);
+    color: var(--color-letras-dos);
+    text-transform: capitalize;
+    width: 8%;
+    height: 2.5em;
+    border: 0;
 
+}
 .footer{
     height: 20em;
     display: flex;
@@ -337,6 +371,10 @@ ul li a:hover{
 }
 
 @media (width < 600px){
+    body{
+        background: pink;
+        position: relative;
+    }
     header a i{
         text-transform: none;
         color: inherit;
@@ -350,12 +388,13 @@ ul li a:hover{
         height: 5em;
         background: var(--color-fondo-movil);
         color: var(--color-letras);
-        position: relative;
+        position: fixed;
         z-index:-1;
+        grid-area: header;
     }
     .frame1{
-        top: 5em;
         position: absolute;
+        top: 5em;
         background: var(--color-fondo);
         display: flex;
         flex-direction: column;
@@ -363,6 +402,8 @@ ul li a:hover{
         /* justify-content: space-between; */
         height: 30em;
         padding: 1em;
+        width: 100%;
+        grid-area: frame1;
     }
 
     .frame1 img{
@@ -433,22 +474,74 @@ ul li a:hover{
         /* background: red; */
         bottom: 5%;
     }
-    
+    /*
+    .frame3{
+        top: 75em;
+        position: absolute;
+        background: greenyellow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40em;
+        width: 100%;
+    }
+
+    .frame3_contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: red;
+        margin-top: 1em;
+        position: absolute;
+        height: 38em;
+        width: 80%;
+    }
+    .frame3_contenido_parte1,
+    .frame3_contenido_parte2,
+    .frame3_contenido_parte3{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .frame3_contenido_parte1 img,
+    .frame3_contenido_parte2 img,
+    .frame3_contenido_parte3 img{
+        position: absolute;
+        height: 10em;
+        width: auto;
+    } 
+
+    }
+    .frame4{
+        background: red;
+        position: absolute;
+        top: 115em;
+        display: flex;
+        margin: 0;
+    }
+    .frame5{
+        background: goldenrod;
+        position: absolute;
+        top: 150em;
+    }
     .footer{
-        /* position: absolute; */
+        position: absolute;
         display: flex;
         flex-direction: column;
         width: 100%;
         height: auto;
+        top: 180em;
     }
 
     .footer_columna{
         margin-bottom: 2em;
-        /* background: red; */
+        /* background: red; 
         width: 50%;
     }
 
     .footer div:last-child{
         margin-left: 1em;
     }
-}
+
+*/ }
