@@ -9,6 +9,9 @@
 body{
     background: lightcoral;
     display: flex;
+    height: 59.1em;
+    position: relative;
+    padding: 0;
 }
 .sidebar{
     background: lightgreen;
@@ -16,7 +19,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     width: 25%;
-    height: 60em;
+    height: 59.1em;
     padding: 1em;
 }
 .sidebar_menu{
@@ -32,4 +35,77 @@ body{
     border-top-right-radius: 10px; /* Aplica un borde circular solo al lado superior derecho */
     border-bottom-left-radius: 20px; /* Aplica un borde circular solo al lado inferior izquierdo */
     border-bottom-right-radius: 30px;
+}
+.sidebar_menu li a{
+    text-decoration: none; /* Eliminar el subrayado */
+    color: white;
+}
+
+.main{
+    padding: 1.5em;
+    width: 75%;
+    height: 59.1em;
+    background: lightblue;
+}
+.main h2{
+    margin-bottom: 1em;
+}
+.contenedores{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    height: 54.5em;
+    background: lightseagreen;
+
+}
+.contenedor1{
+    background: lightcyan;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 15px;
+    height: 15em;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+.contenedor1 div{
+    line-height: 2em;
+}
+.contenedor1 a{
+    font-size: 2em;
+}
+.contenedor1 img{
+    width: 17%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.bottomPage{
+    display: flex;
+    justify-content: space-between;
+    background: lightgoldenrodyellow;
+    align-items: center;
+}
+.bottomPage_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: greenyellow;
+    gap: 2em;
+    line-height: 1.5em;
+    padding: .5em 0;
+    width: 35%;
+    border-radius: 15px;
+}
+.bottomPage_right_button2{
+    width: 50%;
+    height: 2em;
+    border-radius: 10px;
+}
+.bottomPage_button1{
+    width: 25%;
+    height: 2em;
+    border-radius: 10px;
 }
