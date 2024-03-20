@@ -80,7 +80,7 @@ body{
     background-color: #f0f0f0; 
     color: white;
 }
-.sidebar_menu li:first-child{
+.sidebar_menu li:nth-child(3){
     background: var(--color-primario);
     border-radius: 25%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -88,7 +88,6 @@ body{
     height: 2em;
     text-align: center;
 }
-
 .container{
     background: var(--color-background);
     display: grid;
@@ -184,20 +183,15 @@ img{
 .box1:hover img{
     transform: scale(1.1);
 }
-.container .contour:nth-child(3) .box1 img,
-.container .contour:nth-child(14) .box1 img,
-.container .contour:nth-child(17) .box1 img{
-    width: 55%;
+.container .contour:nth-child(3) .box1 img{
+    width: 78%;
 }
-.container .contour:nth-child(12) .box1 img,
+.container .contour:nth-child(4) .box1 img{
+    width: 92%;
+}
 .container .contour:nth-child(5) .box1 img{
-    width: 75%;
+    width: 73%;
 }
-.container .contour:nth-child(11) .box1 img{
-    width: 95%;
-}
-
-
 .bottomPart button {
     background-color: #458ad3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -218,64 +212,4 @@ img{
 }
 .bottomPart:active button{
     background-color: #004080;
-}
-.box2{
-    grid-area: box2;
-    /*background: lightcoral;*/
-}
-.box3{
-    grid-area: box3;
-    /*background: lightcyan;*/
-}
-.box4{
-    grid-area: box4;
-    /*background: lightgreen;*/
-}
-.box5{
-    grid-area: box5;
-    background: lightgoldenrodyellow;
-}
-.box6{
-    grid-area: box6;
-    background: lightgoldenrodyellow;
-}
-.box7{
-    grid-area: box7;
-    background: lightgoldenrodyellow;
-}
-.box8{
-    grid-area: box8;
-    background: lightgoldenrodyellow;
-}
-.box9{
-    grid-area: box9;
-    background: lightgoldenrodyellow;
-}
-.box10{
-    grid-area: box10;
-    background: lightgoldenrodyellow;
-}
-.box11{
-    grid-area: box11;
-    background: lightgoldenrodyellow;
-}
-.box12{
-    grid-area: box12;
-    background: lightgoldenrodyellow;
-}
-.box13{
-    grid-area: box13;
-    background: lightgoldenrodyellow;
-}
-.box14{
-    grid-area: box14;
-    background: lightgoldenrodyellow;
-}
-.box15{
-    grid-area: box15;
-    background: lightgoldenrodyellow;
-}
-.box16{
-    grid-area: box16;
-    background: lightgoldenrodyellow;
 }
