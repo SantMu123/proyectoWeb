@@ -89,7 +89,8 @@ body{
     text-align: center;
 }
 .container{
-    background: var(--color-background);
+    /*background: var(--color-background);*/
+    background: white;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: .5fr repeat(4, 1fr);
@@ -145,7 +146,7 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-transform: capitalize;
-    font-size: 75%;
+    font-size: 65%;
 }
 .box1_sub1 div:first-child h4{
     /*background: red;*/
